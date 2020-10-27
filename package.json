@@ -1,0 +1,23 @@
+{
+  "name": "wpr381_project",
+  "version": "1.0.0",
+  "description": "To start the webapp open the command prompt in the WPR381_Project Folder and run the command \"npm start\"",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel start-Server start-API",
+    "start-Server": "node Web_Server/index.js",
+    "start-API": "node Back_End/index.js",
+    "restore": "npm-run-all restore-BackEnd restore-FrontEnd restore-WebServer",
+    "restore-BackEnd": "cd Back_End && npm i",
+    "restore-FrontEnd": "cd Front_End/weather-app && npm i",
+    "restore-WebServer": "cd Web_Server && npm i"
+  },
+  "author": "",
+  "license": "ISC"
+}

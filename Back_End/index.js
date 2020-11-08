@@ -31,8 +31,6 @@ function getCall(zip){
     });
 }
 
-getCall('5050,ZA')
-
 module.exports = {
     getCall
 }

@@ -7,8 +7,8 @@ class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            redirect:false,
-            postalCode:""
+            redirect: false,
+            postalCode: ""
         }
     }
 
@@ -27,22 +27,23 @@ class Main extends React.Component {
     render() {
         if (this.state.redirect) {
             return <Redirect to={{
-                pathname: '/Weather',
+                pathname: '/current-weather',
                 state: { postalCode: this.state.postalCode }
             }} />
         }
         else {
             return (
-                <section className="top-banner">
-                    <div className="container">
-                        <h1 className="heading">Weather App</h1>
-                        <div>
-                            <input type="text" placeholder="EnterPostalCode" autoFocus onChange={this.changePostal} />
-                            <button type="button" formAction='Weather' onClick={this.buttonClick}>Get Weather Forecast</button>
-                            <span className="msg"></span>
-                        </div>
+                <div className="zipDiv">
+                    <h1 className="heading">Get Weather Forecast</h1>
+                    <p>Enter a valid South African Postal Address</p>
+                    <div>
+                        <br/>
+                        <input type="text" placeholder="EnterPostalCode" autoFocus onChange={this.changePostal} />
+                        <br/>
+                        <button type="button" formAction='Weather' onClick={this.buttonClick}>Get Weather Forecast</button>
+                        <span className="msg"></span>
                     </div>
-                </section>
+                </div>
             )
         }
     }

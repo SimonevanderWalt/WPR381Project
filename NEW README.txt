@@ -1,1 +1,0 @@
-Delete all folders and files related to git before submitting. He can track my contributions if you dont

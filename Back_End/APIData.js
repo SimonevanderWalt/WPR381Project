@@ -6,8 +6,7 @@ let appId = "88885f5108274b5c72dadcd53f9dafd4";
 
 function getCall(zip){
 
-    let url = `${baseUrl}appid=${appId}&zip=${zip}&units=metric`;
-
+    let url = `${baseUrl}appid=${appId}&zip=${zip},ZA&units=metric`;
     fetch(url)
     .then( response => response.json())
     .then( (data) => {
@@ -23,7 +22,6 @@ function getCall(zip){
         return res
     })
     .catch((err) => {
-
         if (err) {
             return 'incorrect zipcod value'
         }

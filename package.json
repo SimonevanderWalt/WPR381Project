@@ -16,7 +16,7 @@
     "start-API": "node Back_End/index.js",
     "restore": "npm-run-all restore-BackEnd restore-FrontEnd restore-WebServer",
     "restore-BackEnd": "cd Back_End && npm i",
-    "restore-FrontEnd": "cd Front_End/weather-app && npm i",
+    "restore-FrontEnd": "cd Front_End/weather-app && npm i && npm run build",
     "restore-WebServer": "cd Web_Server && npm i"
   },
   "author": "",

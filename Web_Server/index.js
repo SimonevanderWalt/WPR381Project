@@ -20,6 +20,9 @@ app.use(express.static(buildPath));
 app.get('/',(req, res)=>{
     res.sendFile(path.resolve(buildPath+"/index.html"))
 });
+app.get('*',(req, res)=>{
+    res.sendFile(path.resolve(buildPath+"/index.html"))
+});
 
 
 app.listen(port, (err)=>{

@@ -15,7 +15,7 @@ function getCall(zip){
         feel:data['main']['feels_like'],
         tempMin:data['main']['temp_min'],
         tempMax:data['main']['temp_max'],
-        cityName: data['name'], 
+        cityName: data['name'],
         country: data['sys']['country'],
         description: data['weather'][0]['description'],
         icon:data['weather'][0]['icon']}
